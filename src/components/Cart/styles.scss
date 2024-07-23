@@ -1,0 +1,5 @@
+.buble {
+  top: -5px;
+  right: -5px;
+  @apply absolute  bg-black text-white   border rounded-full w-[20px] h-[20px] flex justify-center items-center;
+}

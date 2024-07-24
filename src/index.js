@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage";
 import ProductDetails from "./pages/ProductDetails";
 import "./index.css";
 import { CategoryContextProvider } from "./contexts/CategoryContext";
+import { CartContextProvider } from "./contexts/CartContext";
 
 const client = new ApolloClient({
   uri: "http://localhost:4000/graphql",
@@ -27,9 +28,11 @@ const router = createBrowserRouter([
 ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
-      <CategoryContextProvider>
-        <RouterProvider router={router} />
-      </CategoryContextProvider>
+      <CartContextProvider>
+        <CategoryContextProvider>
+          <RouterProvider router={router} />
+        </CategoryContextProvider>
+      </CartContextProvider>
     </ApolloProvider>
   </React.StrictMode>,
   document.getElementById("root")

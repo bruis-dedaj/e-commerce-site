@@ -1,0 +1,56 @@
+.product-card {
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    .quick-shop-btn {
+      display: flex;
+    }
+  }
+
+  .quick-shop-btn {
+    display: none;
+    position: absolute;
+    bottom: 8px; /* Adjusted position to be lower */
+    right: 16px;
+    background-color: #34d399; /* green color */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: display 0.3s ease;
+
+    svg {
+      font-size: 18px;
+      color: white;
+    }
+  }
+
+  .overlay {
+    display: none;
+    background-color: rgba(233, 227, 227, 0);
+  }
+
+  &.out-of-stock {
+    .quick-shop-btn {
+      display: none;
+    }
+    .overlay {
+      display: flex;
+    }
+  }
+
+  .font-raleway {
+    font-family: "Raleway", sans-serif;
+  }
+}

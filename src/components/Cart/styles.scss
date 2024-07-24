@@ -1,5 +1,20 @@
-.buble {
-  top: -5px;
-  right: -5px;
-  @apply absolute  bg-black text-white   border rounded-full w-[20px] h-[20px] flex justify-center items-center;
+.bubble {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: black;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  fill: black;
+  path {
+    fill: black;
+  }
 }
